@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BarGraphComponent } from './bar-graph/bar-graph.component';
 
 @Component({
   selector: 'app-root',
