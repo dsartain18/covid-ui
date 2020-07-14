@@ -1,3 +1,15 @@
-<p>bar-graph works!</p>
+<!-- https://www.ngdevelop.tech/how-to-use-ngx-charts-in-angular/ -->
 
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<ngx-charts-bar-vertical 
+    [view]="[1000,400]"
+    [results]="salesData"
+    [xAxisLabel]="'Products'"
+    [legendTitle]="'Product Sale Chart'"
+    [yAxisLabel]="'Sale'"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxis]="true"
+    [yAxis]="true"
+    [gradient]="true">
+</ngx-charts-bar-vertical>
