@@ -28,7 +28,7 @@ stages:
     - task: CopyFiles@2
       displayName: 'Copy Files to: dist/AzureResourceGroup'
       inputs:
-        SourceFolder: covid-ui/AzureResourceGroup
+        SourceFolder: AzureResourceGroup
         Contents: '*.json'
         TargetFolder: 'dist/AzureResourceGroup'
 
