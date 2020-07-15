@@ -6,26 +6,30 @@
 trigger:
 - develop
 
-pool:
-  vmImage: 'windows-2019'
+stages: 
+- stage: Build
+  jobs:
+  - job: Build
+    pool:
+      vmImage: 'windows-2019'
 
-steps:
-  - task: Npm@1
-    inputs:
-      command: 'install'
-      workingDir: './covid-ui'
+    steps:
+    - task: Npm@1
+      inputs:
+        command: 'install'
+        workingDir: './covid-ui'
   
-  - task: Npm@1
-    displayName: 'npm run build build'
-    inputs:
-      command: custom
-      verbose: false
-      workingDir: './covid-ui'
-      customCommand: 'run build'
+    - task: Npm@1
+      displayName: 'npm run build build'
+      inputs:
+        command: custom
+        verbose: false
+        workingDir: './covid-ui'
+        customCommand: 'run build'
 
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: dist'
-    inputs:
-      PathtoPublish: dist
-      ArtifactName: dist
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact: dist'
+      inputs:
+        PathtoPublish: dist
+        ArtifactName: dist
         
