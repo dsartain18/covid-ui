@@ -25,6 +25,12 @@ stages:
         command: custom
         verbose: false
         customCommand: 'run build'
+    - task: CopyFiles@2
+      displayName: 'Copy Files to: dist/AzureResourceGroup'
+      inputs:
+        SourceFolder: ./AzureResourceGroup
+        Contents: '*.json'
+        TargetFolder: 'dist/AzureResourceGroup'
 
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact: dist'
