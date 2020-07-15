@@ -30,6 +30,6 @@ stages:
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact: covid-ui'
       inputs:
-        PathtoPublish: covid-ui
-        ArtifactName: covid-ui
+        PathtoPublish: covid-ui\dist
+        ArtifactName: covid-ui\dist
         
