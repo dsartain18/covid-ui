@@ -13,12 +13,12 @@ steps:
   - task: Npm@1
     inputs:
       command: 'install'
-      workingDir: '../covid-ui'
+      workingDir: './covid-ui'
   
   - task: Npm@1
     displayName: 'npm run build build'
     inputs:
       command: custom
       verbose: false
-      workingDir: '../covid-ui'
+      workingDir: './covid-ui'
       customCommand: 'run build'
