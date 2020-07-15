@@ -20,7 +20,7 @@ stages:
         workingDir: './covid-ui'
   
     - task: Npm@1
-      displayName: 'npm run build build'
+      displayName: 'npm run build'
       inputs:
         command: custom
         verbose: false
