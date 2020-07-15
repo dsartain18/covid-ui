@@ -15,9 +15,9 @@ stages:
 
     steps:
     - task: Npm@1
+      displayName: 'npm install'
       inputs:
         command: 'install'
-        workingDir: './covid-ui'
   
     - task: Npm@1
       displayName: 'npm run build'
