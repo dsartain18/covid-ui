@@ -24,7 +24,6 @@ stages:
       inputs:
         command: custom
         verbose: false
-        workingDir: './covid-ui'
         customCommand: 'run build'
 
     - task: PublishBuildArtifacts@1
