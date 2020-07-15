@@ -28,8 +28,8 @@ stages:
         customCommand: 'run build'
 
     - task: PublishBuildArtifacts@1
-      displayName: 'Publish Artifact: dist'
+      displayName: 'Publish Artifact: covid-ui'
       inputs:
-        PathtoPublish: dist
-        ArtifactName: dist
+        PathtoPublish: covid-ui
+        ArtifactName: covid-ui
         
