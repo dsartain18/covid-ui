@@ -24,8 +24,8 @@ steps:
       customCommand: 'run build'
 
   - task: PublishBuildArtifacts@1
-      displayName: 'Publish Artifact: dist'
-      inputs:
-        PathtoPublish: dist
-        ArtifactName: dist
+    displayName: 'Publish Artifact: dist'
+    inputs:
+      PathtoPublish: dist
+      ArtifactName: dist
         
