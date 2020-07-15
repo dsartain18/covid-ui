@@ -16,9 +16,9 @@ steps:
       workingDir: '../covid-ui'
   
   - task: Npm@1
-  displayName: 'npm run build build'
-  inputs:
-    command: custom
-    verbose: false
-    workingDir: '../covid-ui'
-    customCommand: 'run build'
+    displayName: 'npm run build build'
+    inputs:
+      command: custom
+      verbose: false
+      workingDir: '../covid-ui'
+      customCommand: 'run build'
